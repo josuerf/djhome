@@ -1,5 +1,7 @@
 package main.java.com.djhome.io;
 
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -22,10 +24,10 @@ public class FileUtils {
         return null;
     }
 
-    public static void writeJsonFile(String fileName, String fileContent) {
+    public static void writeJsonFile(String fileName, Object source) {
         Path filePath = Path.of(USER_DIR + "\\src\\main\\resources\\" + fileName + ".json");
         try {
-            Files.writeString(filePath, fileContent);
+            Files.writeString(filePath, new Gson().toJson(source));
         } catch (IOException e) {
             e.printStackTrace();
         }

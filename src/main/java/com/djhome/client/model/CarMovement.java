@@ -19,7 +19,7 @@ class CarMovement {
             public void run()
             {
                 if(Car.DISTANCE <= 0){
-                    System.out.println("\nVocê Chegou em Casa.");
+                    System.out.println("\nYou Arrived!");
                     stop();
                 } else {
                     printDistance();
@@ -34,7 +34,7 @@ class CarMovement {
         task.cancel();
     }
     private void printDistance() {
-        System.out.println("Carro à " + Car.DISTANCE + "m");
+        System.out.println("Car Distance: " + Car.DISTANCE + "m");
     }
 
 }

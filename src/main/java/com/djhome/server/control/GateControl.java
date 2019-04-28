@@ -3,10 +3,10 @@ package main.java.com.djhome.server.control;
 public class GateControl {
 
     public String open (){
-        return "Portão Aberto";
+        return "Gate Opened";
     }
     public String close(){
-        return "Portão Fechado";
+        return "Gate Closed";
     }
 
 }

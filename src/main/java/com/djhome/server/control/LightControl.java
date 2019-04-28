@@ -3,10 +3,10 @@ package main.java.com.djhome.server.control;
 public class LightControl {
 
     public String on (){
-        return "Luzes Ligadas";
+        return "Lights On";
     }
     public String off(){
-        return "Luzes Desligadas";
+        return "Lights Off";
     }
 
 }

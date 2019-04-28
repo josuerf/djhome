@@ -12,9 +12,9 @@ public class HomeController {
 
     private static final String BASE_PACKAGE = "main.java.com.djhome.server.control.";
 
-    public String distanceAction(int distance) {
+    public String distanceBasedAction(int distance) {
         List<Instruction> instructions = new Gson()
-                .fromJson(new FileUtils().readJsonFile("instructions"),
+                .fromJson(FileUtils.readJsonFile("instructions"),
                         new TypeToken<List<Instruction>>() {
                         }.getType());
 
