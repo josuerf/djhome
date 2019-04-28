@@ -24,7 +24,7 @@ public class Client {
         showInitDistanceMenu();
         String initDistance = getSelectedMetersOption();
         //Decay of car movement in meters
-        showCarMoveSpeed();
+        showRequestFrenquencyMenu();
         String requestFrequency = getSelectedMetersOption();
         //Write new json config file
         setSelectedConfig(protocol, initDistance, requestFrequency);
@@ -79,7 +79,7 @@ public class Client {
         System.out.print("Option: ");
     }
 
-    private static void showCarMoveSpeed() {
+    private static void showRequestFrenquencyMenu() {
         System.out.println("\nChoose the request's frequency to the server:");
         System.out.print("Frequency in meters: ");
     }
