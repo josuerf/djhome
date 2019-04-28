@@ -1,1 +1,1 @@
-{"protocol":"UDP","initialDistance":"1000","carMoveSpeed":"100"}
+{"protocol":"UDP","initialDistance":"1000","requestFrequency":"100"}
