@@ -16,15 +16,15 @@ public class UDPServer implements ServerInterface<DatagramPacket> {
 
         serverSocket = new DatagramSocket(999);
         System.out.println("UDP Server is running.");
+        while (true) {
+            byte[] receiveData = new byte[1024];
 
-        byte[] receiveData = new byte[1024];
+            DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+            serverSocket.receive(receivePacket);
 
-        DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-        serverSocket.receive(receivePacket);
-
-        String response = RequestActionFinder.doRequestAction(new String(receivePacket.getData()));
-        sendResponse(receivePacket, response);
-
+            String response = RequestActionFinder.doRequestAction(new String(receivePacket.getData()));
+            sendResponse(receivePacket, response);
+        }
     }
 
     @Override

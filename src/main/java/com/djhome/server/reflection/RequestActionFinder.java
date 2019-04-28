@@ -1,5 +1,7 @@
 package main.java.com.djhome.server.reflection;
 
+import main.java.com.djhome.server.utils.NumberUtils;
+
 public class RequestActionFinder {
     public static String doRequestAction(String request){
         String response = new ClassReflector()
@@ -11,10 +13,11 @@ public class RequestActionFinder {
     }
 
     private static Integer getRequestParam(String request) {
-        return Integer.parseInt(request);
+        return Integer.parseInt(NumberUtils.clearString(request));
     }
 
     private static String getRequestMethod() {
         return "distanceAction";
     }
+
 }
