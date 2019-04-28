@@ -29,7 +29,7 @@ public class Car {
     private void loadConfigs() {
         Map<String, String> config = new Gson()
                 .fromJson(FileUtils.readJsonFile("config"),
-                        new TypeToken<>(){}.getType());
+                        new TypeToken<Map<String, String>>(){}.getType());
 
         Car.DISTANCE = Integer.parseInt(config.get("initialDistance"));
         this.requestFrequency = Integer.parseInt(config.get("requestFrequency"));

@@ -25,9 +25,9 @@ public class FileUtils {
     }
 
     public static void writeJsonFile(String fileName, Object source) {
-        Path filePath = Path.of(USER_DIR + "\\src\\main\\resources\\" + fileName + ".json");
+        Path filePath = Paths.get(USER_DIR + "\\src\\main\\resources\\" + fileName + ".json");
         try {
-            Files.writeString(filePath, new Gson().toJson(source));
+            Files.write(filePath, new Gson().toJson(source).getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
