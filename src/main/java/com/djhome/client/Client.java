@@ -25,9 +25,9 @@ public class Client {
         String initDistance = getSelectedMetersOption();
         //Decay of car movement in meters
         showCarMoveSpeed();
-        String carMoveSpeed = getSelectedMetersOption();
+        String requestFrequency = getSelectedMetersOption();
         //Write new json config file
-        setSelectedConfig(protocol, initDistance, carMoveSpeed);
+        setSelectedConfig(protocol, initDistance, requestFrequency);
 
     }
 
@@ -54,7 +54,7 @@ public class Client {
         }
     }
 
-    private static void setSelectedConfig(String protocol, String initDistance, String carMoveSpeed) {
+    private static void setSelectedConfig(String protocol, String initDistance, String requestFrequency) {
         Gson gson = new Gson();
         Map<String, String> config = gson
                 .fromJson(FileUtils.readJsonFile("config"),
@@ -65,7 +65,7 @@ public class Client {
 
         config.put("protocol", protocol);
         config.put("initialDistance", initDistance);
-        config.put("carMoveSpeed", carMoveSpeed);
+        config.put("requestFrequency", requestFrequency);
 
         FileUtils.writeJsonFile("config", gson.toJson(config));
     }
@@ -80,8 +80,8 @@ public class Client {
     }
 
     private static void showCarMoveSpeed() {
-        System.out.println("\nChoose the car's movement speed:");
-        System.out.print("Speed in meters: ");
+        System.out.println("\nChoose the request's frequency to the server:");
+        System.out.print("Frequency in meters: ");
     }
 
     private static void showInitDistanceMenu() {

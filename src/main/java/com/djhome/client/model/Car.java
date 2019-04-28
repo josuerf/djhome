@@ -18,7 +18,7 @@ public class Car {
                         new TypeToken<Map<String, String>>(){}.getType());
 
         Car.DISTANCE = Integer.parseInt(config.get("initialDistance"));
-        this.decay = Integer.parseInt(config.get("carMoveSpeed"));
+        this.decay = Integer.parseInt(config.get("requestFrequency"));
     }
 
     public void bringMeToMyHome() {
