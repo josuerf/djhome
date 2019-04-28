@@ -1,0 +1,13 @@
+[
+  {
+    "distance": 200,
+    "control": "Light",
+    "action": "on"
+  },
+  {
+    "distance": 100,
+    "control": "Gate",
+    "action": "open"
+  }
+]
+
