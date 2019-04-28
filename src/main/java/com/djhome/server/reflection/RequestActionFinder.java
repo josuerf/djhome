@@ -17,7 +17,7 @@ public class RequestActionFinder {
     }
 
     private static String getRequestMethod() {
-        return "distanceAction";
+        return "distanceBasedAction";
     }
 
 }

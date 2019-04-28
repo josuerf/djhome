@@ -9,21 +9,16 @@ import java.util.Map;
 public class Car {
 
     static int DISTANCE;
-    private final int decay;
+    private int requestFrequency;
     private CarMovement carMovement;
 
     public Car() {
-        Map<String, String> config = new Gson()
-                .fromJson(FileUtils.readJsonFile("config"),
-                        new TypeToken<Map<String, String>>(){}.getType());
-
-        Car.DISTANCE = Integer.parseInt(config.get("initialDistance"));
-        this.decay = Integer.parseInt(config.get("requestFrequency"));
+        loadConfigs();
     }
 
     public void bringMeToMyHome() {
         carMovement = new CarMovement();
-        carMovement.run(decay);
+        carMovement.run(requestFrequency);
     }
 
     public void makeStop() {
@@ -31,4 +26,12 @@ public class Car {
             carMovement.stop();
     }
 
+    private void loadConfigs() {
+        Map<String, String> config = new Gson()
+                .fromJson(FileUtils.readJsonFile("config"),
+                        new TypeToken<>(){}.getType());
+
+        Car.DISTANCE = Integer.parseInt(config.get("initialDistance"));
+        this.requestFrequency = Integer.parseInt(config.get("requestFrequency"));
+    }
 }
