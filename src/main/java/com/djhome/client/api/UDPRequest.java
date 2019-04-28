@@ -21,17 +21,19 @@ public class UDPRequest implements Request{
     public void executeCall(String param, OnAPIResponseListener onAPIResponseListener, OnAPIErrorListener onAPIErrorListener) {
         try (DatagramSocket socket = new DatagramSocket()){
 
-            byte[] response = new byte[1024];
+            byte[] responseBuffer = new byte[1024];
 
             InetAddress IPAddress = InetAddress.getByName(host);
             DatagramPacket sendPacket = new DatagramPacket(param.getBytes(), param.getBytes().length,
                     IPAddress, port);
             socket.send(sendPacket);
 
-            DatagramPacket receivePacket = new DatagramPacket(response, response.length);
+            DatagramPacket receivePacket = new DatagramPacket(responseBuffer, responseBuffer.length);
             socket.receive(receivePacket);
+            responseBuffer = receivePacket.getData();
+
             if(onAPIResponseListener != null) {
-                onAPIResponseListener.onResponse(Arrays.toString(receivePacket.getData()));
+                onAPIResponseListener.onResponse(new String(responseBuffer, 0, responseBuffer.length));
             }
 
         } catch (IOException e) {
