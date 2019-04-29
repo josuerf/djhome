@@ -1,11 +1,11 @@
-package main.java.com.djhome.server.reflection;
+package com.djhome.server.reflection;
 
-import main.java.com.djhome.server.utils.NumberUtils;
+import com.djhome.server.utils.NumberUtils;
 
 public class RequestActionFinder {
     public static String doRequestAction(String request){
         String response = new ClassReflector()
-                .getMirroredClass("main.java.com.djhome.server.controller.HomeController")
+                .getMirroredClass("com.djhome.server.controller.HomeController")
                 .newInstance()
                 .getMethod(getRequestMethod(), getRequestParam(request))
                 .build();

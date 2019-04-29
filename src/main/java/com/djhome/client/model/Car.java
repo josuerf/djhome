@@ -1,8 +1,8 @@
-package main.java.com.djhome.client.model;
+package com.djhome.client.model;
 
+import com.djhome.io.FileUtils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import main.java.com.djhome.io.FileUtils;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package main.java.com.djhome.server.utils;
+package com.djhome.server.utils;
 
 public class NumberUtils {
     public static String clearString(String request) {

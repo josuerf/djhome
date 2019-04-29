@@ -1,6 +1,6 @@
-package main.java.com.djhome.client.model;
+package com.djhome.client.model;
 
-import main.java.com.djhome.client.api.RequestBuilder;
+import com.djhome.client.api.RequestBuilder;
 
 import java.util.Timer;
 import java.util.TimerTask;

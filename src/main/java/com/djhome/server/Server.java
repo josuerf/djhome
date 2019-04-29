@@ -1,10 +1,10 @@
-package main.java.com.djhome.server;
+package com.djhome.server;
 
-import main.java.com.djhome.server.protocols.TCPServer;
-import main.java.com.djhome.server.protocols.UDPServer;
-import main.java.com.djhome.server.utils.MenuUtils;
-import main.java.com.djhome.utils.KeyboardUtils;
-import main.java.com.djhome.utils.Protocols;
+import com.djhome.server.protocols.TCPServer;
+import com.djhome.server.protocols.UDPServer;
+import com.djhome.server.utils.MenuUtils;
+import com.djhome.utils.KeyboardUtils;
+import com.djhome.utils.Protocols;
 
 import java.io.IOException;
 

@@ -1,13 +1,14 @@
-package main.java.com.djhome.client.api;
+package com.djhome.client.api;
 
+import com.djhome.client.api.listeners.OnAPIErrorListener;
+import com.djhome.client.api.listeners.OnAPIResponseListener;
+import com.djhome.io.FileUtils;
+import com.djhome.utils.Protocols;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import main.java.com.djhome.client.api.listeners.OnAPIErrorListener;
-import main.java.com.djhome.client.api.listeners.OnAPIResponseListener;
-import main.java.com.djhome.io.FileUtils;
-import main.java.com.djhome.utils.Protocols;
 
 import java.util.Map;
+
 
 public class RequestBuilder {
     private String host = "127.0.0.1";

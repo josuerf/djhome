@@ -1,16 +1,17 @@
-package main.java.com.djhome.server.controller;
+package com.djhome.server.controller;
 
+import com.djhome.io.FileUtils;
+import com.djhome.server.model.Instruction;
+import com.djhome.server.reflection.ClassReflector;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import main.java.com.djhome.server.model.Instruction;
-import main.java.com.djhome.server.reflection.ClassReflector;
-import main.java.com.djhome.io.FileUtils;
 
 import java.util.List;
 
+
 public class HomeController {
 
-    private static final String BASE_PACKAGE = "main.java.com.djhome.server.control.";
+    private static final String BASE_PACKAGE = "com.djhome.server.control.";
 
     public String distanceBasedAction(int distance) {
         List<Instruction> instructions = new Gson()
