@@ -1,4 +1,4 @@
-package main.java.com.djhome.server.model;
+package com.djhome.server.model;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package main.java.com.djhome.server.reflection;
+package com.djhome.server.reflection;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

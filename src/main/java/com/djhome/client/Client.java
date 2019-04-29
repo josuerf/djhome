@@ -1,11 +1,11 @@
-package main.java.com.djhome.client;
+package com.djhome.client;
 
+import com.djhome.client.model.Car;
+import com.djhome.client.utils.MenuUtils;
+import com.djhome.io.FileUtils;
+import com.djhome.utils.KeyboardUtils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import main.java.com.djhome.client.model.Car;
-import main.java.com.djhome.client.utils.MenuUtils;
-import main.java.com.djhome.io.FileUtils;
-import main.java.com.djhome.utils.KeyboardUtils;
 
 import java.util.Map;
 

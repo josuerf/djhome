@@ -1,4 +1,4 @@
-package main.java.com.djhome.server.control;
+package com.djhome.server.control;
 
 public class LightControl {
 

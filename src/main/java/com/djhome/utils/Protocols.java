@@ -1,4 +1,4 @@
-package main.java.com.djhome.utils;
+package com.djhome.utils;
 
 public enum Protocols {
     UDP,TCP

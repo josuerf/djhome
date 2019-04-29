@@ -1,4 +1,4 @@
-package main.java.com.djhome.io;
+package com.djhome.io;
 
 import com.google.gson.Gson;
 

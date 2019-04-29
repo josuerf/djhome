@@ -1,4 +1,4 @@
-package main.java.com.djhome.server.utils;
+package com.djhome.server.utils;
 
 public class MenuUtils {
     public static void showConfigurationMenu() {

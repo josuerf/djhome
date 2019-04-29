@@ -1,7 +1,8 @@
-package main.java.com.djhome.server.protocols;
+package com.djhome.server.protocols;
 
-import main.java.com.djhome.server.model.ServerInterface;
-import main.java.com.djhome.server.reflection.RequestActionFinder;
+
+import com.djhome.server.model.ServerInterface;
+import com.djhome.server.reflection.RequestActionFinder;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

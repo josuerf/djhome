@@ -1,4 +1,4 @@
-package main.java.com.djhome.client.utils;
+package com.djhome.client.utils;
 
 public class MenuUtils {
     public static void showRequestProtocolMenu() {

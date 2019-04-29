@@ -1,4 +1,4 @@
-package main.java.com.djhome.server.reflection;
+package com.djhome.server.reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
